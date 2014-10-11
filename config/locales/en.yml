@@ -1,0 +1,12 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  spree:
+    print_settings: "Print Settings"
+    print_settings_logo_path: "Logo Path"
+    print_settings_company_name: "Company Name"
+    print_settings_company_address1: "Address Line 1"
+    print_settings_company_address2: "Address Line 2"
+    print_settings_company_phone: "Phone"
+    print_settings_company_website: "Website"

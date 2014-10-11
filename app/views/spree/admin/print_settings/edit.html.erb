@@ -1,0 +1,49 @@
+<%= render 'spree/admin/shared/configuration_menu' %>
+
+<% content_for :page_title do %>
+  <%= Spree.t(:print_settings) %>
+<% end %>
+
+<%= form_tag admin_print_settings_path, method: :put do %>
+
+  <fieldset class="no-border-top">
+    <div data-hook="admin_print_method_form_fields">
+      <div class="row">
+        <div class="alpha twelve columns" data-hook="print_preferences">
+          <fieldset class="no-border-bottom">
+            <legend align="center"><%= Spree.t(:print_settings) %></legend>
+			<div class="field">
+              <%= label_tag(:print_logo_path, Spree.t(:print_settings_logo_path)) + tag(:br) %>
+              <%= preference_field_tag(:print_logo_path, SpreePrintSettings::Config[:print_logo_path], class: 'fullwidth') %>
+       		</div>
+            <div class="field">
+              <%= label_tag(:print_company_name, Spree.t(:print_settings_company_name)) + tag(:br) %>
+              <%= preference_field_tag(:print_company_name, SpreePrintSettings::Config[:print_company_name], class: 'fullwidth') %>
+            </div>
+			<div class="field">
+              <%= label_tag(:print_company_address1, Spree.t(:print_settings_company_address1)) + tag(:br) %>
+              <%= preference_field_tag(:print_company_address1, SpreePrintSettings::Config[:print_company_address1], class: 'fullwidth') %>
+    		</div>
+			<div class="field">
+              <%= label_tag(:print_company_address2, Spree.t(:print_settings_company_address2)) + tag(:br) %>
+              <%= preference_field_tag(:print_company_address2, SpreePrintSettings::Config[:print_company_address2], class: 'fullwidth') %>
+    		</div>
+			<div class="field">
+              <%= label_tag(:print_company_phone, Spree.t(:print_settings_company_phone)) + tag(:br) %>
+              <%= preference_field_tag(:print_company_phone, SpreePrintSettings::Config[:print_company_phone], class: 'fullwidth') %>
+    		</div>
+			<div class="field">
+              <%= label_tag(:print_company_website, Spree.t(:print_settings_company_website)) + tag(:br) %>
+              <%= preference_field_tag(:print_company_website, SpreePrintSettings::Config[:print_company_website], class: 'fullwidth') %>
+    		</div>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+
+  <div class="form-buttons filter-actions actions" data-hook="buttons">
+    <%= button Spree.t('actions.update'), 'icon-refresh' %>
+  </div>
+
+<% end %>
