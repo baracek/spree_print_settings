@@ -6,5 +6,6 @@ module Spree
     preference :print_company_address2, :string, :default => 'Unknown Address 2'
     preference :print_company_phone, :string, :default => 'Unknown Phone #'
     preference :print_company_website, :string, :default => 'Unknown Website'
+    preference :print_prawn_options, :string, :default => ''
   end
 end

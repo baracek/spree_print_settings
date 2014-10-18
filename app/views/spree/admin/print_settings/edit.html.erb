@@ -36,6 +36,10 @@
               <%= label_tag(:print_company_website, Spree.t(:print_settings_company_website)) + tag(:br) %>
               <%= preference_field_tag(:print_company_website, SpreePrintSettings::Config[:print_company_website], class: 'fullwidth') %>
     		</div>
+			<div class="field">
+              <%= label_tag(:print_prawn_options, Spree.t(:print_settings_prawn_options)) + tag(:br) %>
+              <%= preference_field_tag(:print_prawn_options, SpreePrintSettings::Config[:print_prawn_options], class: 'fullwidth') %>
+    		</div>
           </fieldset>
         </div>
       </div>

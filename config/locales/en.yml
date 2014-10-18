@@ -10,3 +10,4 @@ en:
     print_settings_company_address2: "Address Line 2"
     print_settings_company_phone: "Phone"
     print_settings_company_website: "Website"
+    print_settings_prawn_options: "Print Options"
